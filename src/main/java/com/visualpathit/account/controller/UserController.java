@@ -170,6 +170,7 @@ public class UserController {
       return "uuid = " + uuid;
     }
     
-
+    private static void empty() {
+    }
     
 }
