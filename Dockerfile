@@ -12,7 +12,8 @@ WORKDIR /usr/src/app/
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY --from=BUILD_IMAGE target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
+RUN echo "Rohin Runtime" && pwd && whoami && ls
+COPY --from=BUILD_IMAGE /usr/src/app/target/vprofile-v2.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
