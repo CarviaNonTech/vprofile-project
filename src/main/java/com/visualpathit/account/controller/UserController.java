@@ -164,6 +164,16 @@ public class UserController {
       }
       return "rabbitmq";
     }
+
+    @RequestMapping(value={"/user/rabbit2"}, method={RequestMethod.GET})
+    public String rabbitmqSetUp2() { 
+    	System.out.println("Rabbit mq method is callled!!!");
+      for (int i = 0; i < 20; i++) {
+        producerService.produceMessage(generateString());
+      }
+      return "rabbitmq";
+    }
+
     
     private static String generateString() {
       String uuid = UUID.randomUUID().toString();
