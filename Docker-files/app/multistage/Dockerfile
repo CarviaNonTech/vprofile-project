@@ -1,7 +1,7 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 #RUN git clone https://github.com/devopshydclub/vprofile-project.git
-RUN echo "Rohin" && pwd
+RUN echo "Rohin" && pwd && whoami
 RUN cd /var/lib/jenkins/workspace/vprofile4 && git checkout docker && mvn install
 
 FROM tomcat:9-jre11
