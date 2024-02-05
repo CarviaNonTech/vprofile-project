@@ -4,7 +4,7 @@ WORKDIR /usr/src/app/
 RUN apt update && apt install maven -y
 COPY ./ /usr/src/app/
 #RUN git clone https://github.com/devopshydclub/vprofile-project.git
-RUN echo "Rohin" && pwd && whoami
+RUN echo "Rohin" && pwd && whoami && ls
 RUN mvn install -DskipTests
 
 FROM tomcat:9-jre11
