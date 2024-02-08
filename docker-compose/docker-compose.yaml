@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   webapi:
-    image: 165825776547.dkr.ecr.us-east-1.amazonaws.com/vprofile4_java:latest
+    image: 65825776547.dkr.ecr.us-east-1.amazonaws.com/vprofile4_java:latest
     ports:
       - "8080:8080"
     restart: always
